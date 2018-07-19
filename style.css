@@ -1,0 +1,17 @@
+#Title{
+    background: darkblue;
+    border-radius: 25px;
+    color: lightgoldenrodyellow;
+    margin: 3%;
+    padding: 10px;
+    text-shadow: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.para{
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+}
