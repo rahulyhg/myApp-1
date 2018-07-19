@@ -28,9 +28,28 @@
         <br><br>
 
         <form id="Search">
-            <input id="location" value="" placeholder="Enter a location" type="text">
-            <input class="button" value="     Search" onclick="hello()" type="button">
+            <input id="location" value="" placeholder="Enter a location" type="text" onmousedown="hideData()">
+            <input class="button" value="     Search" onclick="start()" type="button">
         </form>
-    
+        <div class="results" id="results" style="display:none;">
+            <table>
+                <tr>
+                    <th>
+                        <img src="artifacts/sunrise-100px.svg" width="100px">
+                    </th>
+                    <th>
+                        <img src="artifacts/sunset-100px.svg" width="100px">
+                    </th>
+                    <tr>
+                        <td>
+                            <p>Sunrise time: 5:39:11 AM </p>
+                        </td>
+                        <td>
+                            <p>Sunset time: 9:25:05 PM</p>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
