@@ -23,6 +23,7 @@ function hideData(){
 }
 
 function startLoading(){
+    $("#results").attr("style", "display:none");
     $(".loader").removeAttr("style");
     setTimeout(function(){
         $(".loader").attr("style", "display:none");
