@@ -15,3 +15,23 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+
+#Search{
+    text-align: center;
+}
+
+.button{
+    background: url(artifacts/search.gif) no-repeat;
+    background-color: rgb(249, 191, 15);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    background-position-x: 10%;
+    background-position-y: 50%;
+}
