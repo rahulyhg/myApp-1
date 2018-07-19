@@ -30,8 +30,9 @@
 
         <form id="Search">
             <input id="location" value="" placeholder="Enter a location" type="text" onmousedown="hideData()">
-            <input class="button" value="     Search" onclick="start()" type="button">
+            <input class="button" value="     Search" onclick="startLoading()" type="button">
         </form>
+        <div class="loader" style="display:none;"></div>
         <div class="results" id="results" style="display:none;">
             <table>
                 <tr>

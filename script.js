@@ -21,3 +21,11 @@ function hideData(){
     $(".setText").replaceWith("<p class='riseText'>Sunset Time:</p>");
     $("#results").attr("style", "display:none");
 }
+
+function startLoading(){
+    $(".loader").removeAttr("style");
+    setTimeout(function(){
+        $(".loader").attr("style", "display:none");
+        start();
+    },3000);
+}
