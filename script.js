@@ -17,8 +17,8 @@ function start(){
 }
 
 function hideData(){
-    $(".riseText").replaceWith("<p class='riseText'>Sunrise Time:</p>");
-    $(".setText").replaceWith("<p class='riseText'>Sunset Time:</p>");
+    //$(".riseText").replaceWith("<p class='riseText'>Sunrise Time:</p>");
+    //$(".setText").replaceWith("<p class='riseText'>Sunset Time:</p>");
     $("#results").attr("style", "display:none");
 }
 
