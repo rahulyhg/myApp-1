@@ -3,13 +3,9 @@ window.onload = Init;
 function Init(){
     //logic to be executed when the page loads goes here...
     document.getElementById("location").value = "";
-}
-
-$(document).ready(function(){
-    $("#moreInfo").hide();
+	$("#moreInfo").hide();
     $("#read-less").hide();
-    //console.log($("#read-type").text().indexOf("Read More") != -1);
-});
+}
 
 function toggleInfo(id){
     //toggles read-more read-less functionality
