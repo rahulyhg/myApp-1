@@ -1,39 +1,57 @@
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp4DVGS0_e1EF41Nmh7swrmvxQss5UnlM&libraries=places"></script>
+        <script type="text/javascript">
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
     </head>
     <body>
-        <div id="Title">
-            <h1 style="text-align: center;">
+        <div id="title">
+            <h1 style="text-align: center">
                 Sunrise and Sunset
             </h1>
         </div>
-    
-    
-        <p style="text-align: center;" class="para">
-            This web app will let the user know the exact time in HH:MM:SS AM/PM format for sunrise and sunset of a particular location based on the search criteria.
-        </p>
-        <p style="text-align: center;" class="para">
-            The plan is to use <a href="https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete" target="_blank">Google's Places Autocomplete</a> API to fetch Geo coordinates, latitude and longitude, when user searches in the input box below; along with autocompleting the place name. 
-        </p>
-        <p style="text-align: center;" class="para">
-            Then the <a href="https://sunrise-sunset.org/api" target="_blank">Sunrise Sunset</a> API will be used to fetch the correct time of sunrise/sunset and display it to the user. 
-        </p>
-        <br><br>
 
-        <form id="Search">
-            <input id="location" value="" placeholder="Enter a location" type="text" onmousedown="hideData()">
-            <input class="button" value="     Search" onclick="startLoading()" type="button">
+        <p class="para">
+            This webapp will let the user know the exact <i>local time</i>, in 24-Hour format, when sunrise and sunset will occur at the user searched location.
+        </p>
+        <p class="para">
+            The plan is to use <a href="https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete" target="_blank">Google's Places Autocomplete API</a> to autocomplete the place name and also fetching Geo Coordinates, latitude and longitude, when user starts typing in the input search box below. 
+        </p>
+        <p class="para">
+            Then using the <a href="https://fcc-weather-api.glitch.me/" target="_blank">Free Code Camp Weather API</a> will be used to fetch the sunrise and sunset time. The results are then converted from UTC to localtime adjusted with timezone and daylight savings to display correct local time of sunrise and sunset using <a href="https://developers.google.com/maps/documentation/timezone/intro" target="_blank">Google's Timezone API.</a>
+        </p>
+        <div id="moreInfo">
+                <p class="para">
+                    For more information about process flow:<br> Reload the page, open console of browser and type
+                </p>
+                <p class="code">
+                    document.enhancedDebugging = "Y"
+                </p>
+        </div>
+        <div id="toggleInfo">
+            <p class="para" id="read-more">
+                <a href="#" onclick="toggleInfo('read-more')">Read More</a>
+            </p>
+            <p class="para" id="read-less">
+                <a href="#" onclick="toggleInfo('read-less')">Read Less</a>
+            </p>
+        </div>
+        <br>
+        <form id="search">
+            <input id="location" type="text" value="" placeholder="Enter a location..." onclick="hideData()">
         </form>
-        <div class="loader" style="display:none;"></div>
-        <div class="results" id="results" style="display:none;">
+        
+        <div class="loader" style="display:none"></div>
+
+        <div class="results" id="results" style="display:none">
             <table>
                 <tr>
                     <th>
@@ -42,16 +60,18 @@
                     <th>
                         <img src="artifacts/sunset-100px.svg" width="100px">
                     </th>
-                    <tr>
-                        <td>
-                            <p class="riseText">Sunrise time:</p>
-                        </td>
-                        <td>
-                            <p class="setText">Sunset time:</p>
-                        </td>
-                    </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="riseText">Sunrise Time:</p>
+                    </td>
+                    <td>
+                        <p class="setText">Sunset Time:</p>
+                    </td>
                 </tr>
             </table>
         </div>
+        <!--continue from here...-->
+        <br><br><br><br><br><br><br><br><br><br><br><br>
     </body>
 </html>

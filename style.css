@@ -1,59 +1,44 @@
-#Title{
+#title{
     background: darkblue;
-    border-radius: 25px;
-    color: lightgoldenrodyellow;
-    margin: 3%;
-    padding: 10px;
-    text-shadow: 3px;
+    border-radius: 20px;
+    color: #f4ecd8;
+    margin: 5%;
+    padding: 1%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+    background-color: #f4ecd8;
+}
+
 .para{
-    text-align: justify;
+    text-align: center;
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-#Search{
+.code{
     text-align: center;
-    margin:auto;
-    position: relative;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.button{
-    background: url(artifacts/search.gif) no-repeat;
-    background-color: rgb(249, 191, 15);
-    border: none;
-    color: white;
+#search{
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+}
+
+input[type=text]{
+    width:50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
     font-size: 16px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-right: 1%;
-    background-position-x: 10%;
-    background-position-y: 50%;
-    cursor: pointer;
-}
-
-table {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100%;
-}
-
-td, th {
-    text-align: center !important;
-    padding: 8px;
-}
-
-.setText{
-    color: #ce2c27;
-}
-.riseText{
-    color: #cfa22b;
+    background-color: white;
+    background-image: url('artifacts/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
 }
 
 .loader {
@@ -69,14 +54,31 @@ td, th {
     animation: spin 1.5s linear infinite;
     margin-left: 45%;
     margin-top: 2%;
-  }
+}
 
-  @-webkit-keyframes spin {
+@-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
+
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+td, th {
+    text-align: center !important;
+    padding: 8px;
+}
+
+.setText{
+    color: #ce2c27;
+}
+.riseText{
+    color: #cfa22b;
+}
